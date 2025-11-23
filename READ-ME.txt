@@ -1,0 +1,7 @@
+** THIS IS THE APPLICATION BASED ON A COOKIE CLICKER APP (https://orteil.dashnet.org/cookieclicker/) **
+
+- For this app are used HTML, CSS, JavaScript and Express.js (for running a server)
+- To run a server through an Express.js you will need to install node.js and to download the whole folder (https://nodejs.org/en/download)
+- Afterwards, in the terminal change the directory to the folder where your file is downloaded with the function cd < Your directory >
+- Then, in the terminal type node server
+- And lastly, in your browser connect to the localhost:3000 to see the application

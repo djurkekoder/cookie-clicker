@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker by Djurke</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="./images/cookie.png">
+</head>
+<body>
+    <div id="blur-when-alert" class="inactive-filter-state">
+    <h2 style="color:rgb(230, 230, 230);">Cookie Clicker</h2>
+    <h3 id="cookie-count" style="color: rgb(230, 230, 230);">0</h3>
+    <br>
+    <br>
+    <div id="cookie-border">
+        <img src="./images/cookie.png" alt="Cookie" id="cookie" draggable="false"></img>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id="buy-menu-border">
+        <div id="menu-item-1" class="anim">
+            Double Clicks
+            <p>100</p>
+        </div>
+        <div id="menu-item-2" class="anim">
+            Tripple Clicks
+            <p>250</p>
+        </div>
+        <div id="menu-item-3" class="anim">
+            Quadruple Clicks
+            <p>500</p>
+        </div>
+    </div>
+    </div>
+    
+    <!-- Custom alert box 1 -->
+    <div id="custom-alert-1">
+        <h2 id="alert-title-1">Do you wish to buy this feature?</h2>
+        <div id="alert-buttons-1"></div>
+            <button id="alert-button-yes-1" class="button1">Yes</button>
+            <button id="alert-button-no-1" class="button1">No</button>
+        </div>
+    </div>
+
+    <!-- Custom alert box 2 -->
+    <div id="custom-alert-double-2">
+        <h2 id="alert-title-1">You successfully bought the double clicks feature!</h2>
+        <button id="alert-button-close-double-2" class="button1">Close</button>
+    </div>
+     <div id="custom-alert-tripple-2">
+        <h2 id="alert-title-1">You successfully bought the tripple clicks feature!</h2>
+        <button id="alert-button-close-tripple2" class="button1">Close</button>
+    </div>
+     <div id="custom-alert-quadruple-2">
+        <h2 id="alert-title-1">You successfully bought the quadruple clicks feature!</h2>
+        <button id="alert-button-close-quadruple-2" class="button1">Close</button>
+    </div>
+
+     <!-- Custom alert box 3 -->
+    <div id="custom-alert-3">
+        <h2 id="alert-title-1">You don't have enough cookies to buy this feature.</h2>
+        <button id="alert-button-close-3" class="button1">Close</button>
+    </div>
+
+    <!-- Custom alert box 4 -->
+    <div id="custom-alert-4">
+        <h2 id="alert-title-1">You already have this feature.</h2>
+        <button id="alert-button-close-4" class="button1">Close</button>
+    </div>
+</body>
+</html> 
