@@ -3,6 +3,5 @@
 - For this app are used HTML, CSS, JavaScript and Express.js (for running a server)
 - To run a server through an Express.js you will need to install node.js and to download the whole folder (https://nodejs.org/en/download)
 - Afterwards, in the terminal change the directory to the folder where your file is downloaded with the function cd < your/directory/path >
-- Next you want to download Express.js using the function npm i express
 - Then, in the terminal type node server
 - And lastly, in your browser connect to the localhost:3000 to see the application
