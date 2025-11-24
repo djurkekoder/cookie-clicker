@@ -9,6 +9,7 @@ const customAlertTripple2 = document.getElementById('custom-alert-tripple-2');
 const customAlertQuadruple2 = document.getElementById('custom-alert-quadruple-2');
 const customAlert3 = document.getElementById('custom-alert-3');
 const customAlert4 = document.getElementById('custom-alert-4');
+const customAlert5 = document.getElementById('custom-alert-5');
 const customAlertButtonYes1 = document.getElementById('alert-button-yes-1');
 const customAlertButtonNo1 = document.getElementById('alert-button-no-1');
 const customAlertButtonCloseDouble2 = document.getElementById('alert-button-close-double-2');
@@ -16,10 +17,12 @@ const customAlertButtonCloseTripple2 = document.getElementById('alert-button-clo
 const customAlertButtonCloseQuadruple2 = document.getElementById('alert-button-close-quadruple-2');
 const customAlertButtonClose3 = document.getElementById('alert-button-close-3');
 const customAlertButtonClose4 = document.getElementById('alert-button-close-4');
+const customAlertButtonYes5 = document.getElementById('alert-button-yes-5');
+const customAlertButtonNo5 = document.getElementById('alert-button-no-5');
 const blurWhenAlert = document.getElementById('blur-when-alert');
 let selectedMenuItem;
-const maxClicks = 999;
-let i = 0;
+const maxClicks = 1000;
+let i = 995;
 
 // Alert 1
 function showCustomAlert1 () {
@@ -77,6 +80,16 @@ function hideCustomAlert4 () {
     blurWhenAlert.classList.remove('active-filter-state');
 }
 
+// Alert 5
+function showCustomAlert5 (){
+    customAlert5.style.display = 'flex';
+    blurWhenAlert.classList.add('active-filter-state');
+}
+function hideCustomAlert5 (){
+    customAlert5.style.display = 'none';
+    blurWhenAlert.classList.remove('active-filter-state');
+}
+
 cookie.onclick = function() {
     cookieCount.classList.add('pop');
 
@@ -87,9 +100,18 @@ cookie.onclick = function() {
     i++;
     cookieCount.innerHTML = i;
 
-    if(i > maxClicks || i === maxClicks){
+    if(i >= maxClicks){
         cookieCount.innerHTML = 'You Beat The Game! Congrats!';
-        i = 0;
+        setTimeout(() => {
+            showCustomAlert5()
+        }, 1000);
+        customAlertButtonYes5.onclick = function () {
+            hideCustomAlert5();
+            i = 0;
+        }
+        customAlertButtonNo5.onclick = function () {
+            hideCustomAlert5();
+        }
     }
 
     // Item 1 (Doule Click)
@@ -184,17 +206,17 @@ cookie.onclick = function() {
 
     // Item 3 (Quadruple Click)
     item3.onclick = function(){
-        if(i < 500){
-            showCustomAlert3();
-            customAlertButtonClose3.onclick = function () {
-                hideCustomAlert3();
-            }
-        }
-        else if(selectedMenuItem === item3){
+        if(selectedMenuItem === item3){
             showCustomAlert4();
             customAlertButtonClose4.onclick = function () {
                     hideCustomAlert4();
                 }   
+        }
+        else if(i < 500){
+            showCustomAlert3();
+            customAlertButtonClose3.onclick = function () {
+                hideCustomAlert3();
+            }
         }
         else{
             showCustomAlertQuadruple2();
@@ -211,3 +233,4 @@ cookie.onclick = function() {
         } 
     };
 }
+
