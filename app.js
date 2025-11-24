@@ -19,7 +19,7 @@ const customAlertButtonClose4 = document.getElementById('alert-button-close-4');
 const blurWhenAlert = document.getElementById('blur-when-alert');
 let selectedMenuItem;
 const maxClicks = 999;
-let i = 500;
+let i = 0;
 
 // Alert 1
 function showCustomAlert1 () {
