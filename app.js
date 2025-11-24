@@ -22,7 +22,7 @@ const customAlertButtonNo5 = document.getElementById('alert-button-no-5');
 const blurWhenAlert = document.getElementById('blur-when-alert');
 let selectedMenuItem;
 const maxClicks = 1000;
-let i = 995;
+let i = 0;
 
 // Alert 1
 function showCustomAlert1 () {
