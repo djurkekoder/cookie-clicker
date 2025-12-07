@@ -20,9 +20,9 @@ const customAlertButtonClose4 = document.getElementById('alert-button-close-4');
 const customAlertButtonYes5 = document.getElementById('alert-button-yes-5');
 const customAlertButtonNo5 = document.getElementById('alert-button-no-5');
 const blurWhenAlert = document.getElementById('blur-when-alert');
-let selectedMenuItem;
+let selectedMenuItem = 0; //localStorage.getItem("selectedItem");
+let i = Number(localStorage.getItem("cookieCount"));
 const maxClicks = 1000;
-let i = 0;
 
 // Alert 1
 function showCustomAlert1 () {
@@ -88,6 +88,12 @@ function showCustomAlert5 (){
 function hideCustomAlert5 (){
     customAlert5.style.display = 'none';
     blurWhenAlert.classList.remove('active-filter-state');
+}
+
+// Save game
+function saveGame(){
+    localStorage.setItem("cookieCount", i);
+    // localStorage.setItem("selectedItem", selectedMenuItem);
 }
 
 cookie.onclick = function() {
@@ -157,6 +163,7 @@ cookie.onclick = function() {
                 cookieCount.innerHTML = i;
             }
         }
+        saveGame();
     };
 
     // Item 2 (Tripple Click)
@@ -202,6 +209,7 @@ cookie.onclick = function() {
                 cookieCount.innerHTML = i;
             }
         }
+        saveGame();
     };
 
     // Item 3 (Quadruple Click)
@@ -231,6 +239,9 @@ cookie.onclick = function() {
                 cookieCount.innerHTML = i;
             }
         } 
+        saveGame();
     };
+    saveGame();
 }
 
+cookieCount.innerHTML = i;
