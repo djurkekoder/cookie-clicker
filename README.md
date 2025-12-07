@@ -1,0 +1,2 @@
+Cooke Clicker by Djurke 💎
+
